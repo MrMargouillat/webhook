@@ -10,8 +10,8 @@ module['exports'] = function helloWorld (hook) {
 
 
     hook.res.setHeader('Content-Type', 'application/json'); //Requires application/json MIME type
-    hook.res.send(JSON.stringify({ "speech": response, "displayText": response 
+    hook.res.json({ "speech": response, "displayText": response 
     //"speech" is the spoken version of the response, "displayText" is the visual version
-  }));
+  });
 
 };
